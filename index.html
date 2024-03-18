@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <img id="title" src="images/astrowaveintrotitle.png" alt="AstroWaveTITLE">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="Backstory.html">Backstory</a>
+    <a href="PhotoG.html">Photo Gallery</a>
+  </nav>
+  <main>
+    <h1>Welcome To The AstroWave-Project</h1>
+    <img id="logo" src="images/Astrowavelogo.png" alt="AstroWaveLOGO">
+    <br>
+
+    <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/AstrowaveV2Menu.png" style="width:100%">
+      <div class="text">Main Menu</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/ShipSelect.png" style="width:100%">
+      <div class="text">Ship Select</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/Shop.png" style="width:100%">
+      <div class="text">Shop</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/V2Ingame.png" style="width:100%">
+      <div class="text">In-Game</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+    <br><br>
+    <button class="button" onclick='location.href="/A121423/game.html"'>Play Now</button>
+  </main>
+  <footer>
+    <p>AstroWave - EST. 2022</p>
+    <button id="footerbutton" onclick='location.href="https://discord.gg/MYW2CBaM6z"'>Official Discord Server</button>
+  </footer>
+</body>
+
+</html>

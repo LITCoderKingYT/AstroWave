@@ -1,0 +1,219 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+body{
+  text-align: center;
+  color: white;
+}
+h1{
+  color: white;
+  font-size: 2em;
+  font-family: orbitronregular;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ef360a, 0 0 40px #ef360a, 0 0 50px #ef360a, 0 0 60px #ef360a, 0 0 70px #ef360a;
+}
+
+footer{
+  font-family: titillium_webregular;
+  font-size: 2em;
+  background-color: #57ffff;
+  color: grey;
+}
+
+button{
+  background-color: #ffffff;
+  color: grey;
+  font-family: orbitronregular;
+  font-size: 2em;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+  transition-duration: 0.4s;
+  padding: 10px;
+  width: 53%;
+}
+
+#footerbutton{
+  font-size: 1em;
+}
+button:hover{
+  background-color: #000000;
+  color: white;
+}
+
+nav{
+  background-color: white;
+  float: center;
+  padding: 8px;
+}
+nav > a{
+  font-family: orbitronregular;
+  float: center;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+}
+nav>a:hover{
+  background-color: black;
+  color: white;
+}
+#title{
+  width: 50%;
+  height: 50%;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#logo{
+  width: 35%;
+  height: 35%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#MainPara{
+  padding: 10px;
+  text-align: center;
+  font-family: orbitronregular;
+  font-size: 1.5em;
+}
+
+#SubPara{
+  font-family: titillium_webregular;
+}
+
+#images{
+  width: 55%;
+  height: 55%;
+  text-align: center;
+}
+
+#caption{
+  font-family: titillium_webregular;
+  font-size: 1em;
+}
+
+@font-face {
+    font-family: 'alienravager';
+    src: url('fonts/alienravageritalic-4b214-webfont.woff2') format('woff2'),
+         url('fonts/alienravageritalic-4b214-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'orbitronregular';
+    src: url('fonts/orbitron-variablefont_wght-webfont.woff2') format('woff2'),
+         url('fonts/orbitron-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'titillium_webregular';
+    src: url('fonts/titilliumweb-regular-webfont.woff2') format('woff2'),
+         url('fonts/titilliumweb-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev{
+  left: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-family: orbitronregular;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  text-shadow: 1px 1px #27ffff;
+  font-family: orbitronregular;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
